@@ -59,19 +59,22 @@ code {
 .content-page-0 {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .about-page {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .about-page-b {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   color: white;
 }
 
@@ -178,7 +181,8 @@ code {
 .loading-container {
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   color: white;
   display: none;
 }
