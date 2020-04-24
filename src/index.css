@@ -23,7 +23,7 @@ code {
   padding-left: 0;
   padding: 20px;
   list-style: none;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ code {
   padding-left: 0;
   padding: 20px;
   list-style: none;
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,19 +59,19 @@ code {
 .content-page-0 {
   background-size: cover;
   background-position: center;
-  height: 667px;
+  height: 100vh;
 }
 
 .about-page {
   background-size: cover;
   background-position: center;
-  height: 667px;
+  height: 100vh;
 }
 
 .about-page-b {
   background-size: cover;
   background-position: center;
-  height: 667px;
+  height: 100vh;
   color: white;
 }
 
@@ -178,7 +178,7 @@ code {
 .loading-container {
   align-items: center;
   justify-content: center;
-  height: 667px;
+  height: 100vh;
   color: white;
   display: none;
 }
