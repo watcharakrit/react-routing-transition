@@ -1,3 +1,5 @@
+html { transform: translate3d(0, 0, 0); }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,210 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navs-header {
+  margin: 0;
+  padding-left: 0;
+  padding: 20px;
+  list-style: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .75);
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.navs-header li {
+  padding: 0 15px;
+}
+
+.navs {
+  margin: 0;
+  padding-left: 0;
+  padding: 20px;
+  list-style: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .75);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.navs li {
+  padding: 0 15px;
+}
+
+.content-page-0 {
+  background-size: cover;
+  background-position: center;
+  height: 667px;
+}
+
+.about-page {
+  background-size: cover;
+  background-position: center;
+  height: 667px;
+}
+
+.about-page-b {
+  background-size: cover;
+  background-position: center;
+  height: 667px;
+  color: white;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+
+/* Fade */
+.fade-enter {
+    transform: translate3d(100%, 0, 0);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.fade-enter.fade-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+.fade-exit {
+    transform: translate3d(0, 0, 0);
+}
+
+.fade-exit.fade-exit-active {
+    transform: translate3d(-20%, 0, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+
+
+.fade-reverse-enter {
+    transform: translate3d(-20%, 0, 0);
+    position: absolute;
+    width: 100%;
+}
+.fade-reverse-enter.fade-reverse-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+.fade-reverse-exit {
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
+}
+
+.fade-reverse-exit.fade-reverse-exit-active {
+    transform: translate3d(100%, 0, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+
+
+
+
+/* Fade from button */
+.bottom-enter {
+    transform: translate3d(0, 100%, 0);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+}
+.bottom-enter.bottom-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+.bottom-exit {
+    transform: translate3d(0, 0, 0);
+}
+
+.bottom-exit.bottom-exit-active {
+    transform: translate3d(0, -20%, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+
+.bottom-reverse-enter {
+    transform: translate3d(0, -20%, 0);
+    position: absolute;
+    width: 100%;
+}
+.bottom-reverse-enter.bottom-reverse-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+.bottom-reverse-exit {
+    transform: translate3d(0, 0, 0);
+    z-index: 2;
+}
+
+.bottom-reverse-exit.bottom-reverse-exit-active {
+    transform: translate3d(0, 100%, 0);
+    transition: opacity 300ms 20ms ease-in, transform 300ms 20ms ease-in;
+}
+
+.box {
+  width: 100%;
+  height: 80px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+  margin-bottom: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.loading-container {
+  align-items: center;
+  justify-content: center;
+  height: 667px;
+  color: white;
+  display: none;
+}
+
+.loading-container.-show {
+  display: flex;
+}
+
+.container {
+  padding: 20px;
+  display: none;
+  height: 100%;
+}
+
+.container.-show {
+  display: block;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.from-bottom {
+  animation: fromBottom .6s forwards;
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
