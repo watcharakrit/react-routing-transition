@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
@@ -106,25 +106,27 @@ const AboutB = () => {
   return (
     <div className="about-page-b" style={{ backgroundImage: 'url("/bg-3.png")' }}>
       <div className={`loading-container ${isLoading? '-show': ''}`}>Loading</div>
-      <div className={`container from-bottom ${!isLoading? '-show': ''}`}>
-        <div className="title">About US B</div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
-        <div className="box"></div>
+      <div className="scrollWrapper">
+        <div className={`container from-bottom ${!isLoading? '-show': ''}`}>
+          <div className="title">About US B</div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+          <div className="box"></div>
+        </div>
       </div>
     </div>
   )
@@ -185,7 +187,7 @@ const Content = withRouter(({ location }) => {
   }, [])
 
   return (
-    <div>
+    <Fragment>
       <TransitionGroup
         childFactory={child => React.cloneElement(
             child,
@@ -217,7 +219,7 @@ const Content = withRouter(({ location }) => {
           </Switch>
         </CSSTransition>
       </TransitionGroup>
-    </div>
+    </Fragment>
   )
 })
 
